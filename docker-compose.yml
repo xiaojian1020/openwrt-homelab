@@ -1,0 +1,10 @@
+version: '3'
+services:
+  app:
+    image: example/app
+    ports:
+      - '80:80'
+  db:
+    image: example/db
+    environment:
+      MYSQL_ROOT_PASSWORD: example
