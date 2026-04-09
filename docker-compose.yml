@@ -1,10 +1,8 @@
-version: '3'
+version: '3.8'
 services:
   app:
-    image: example/app
+    image: myapp:latest
+    deploy:
+      replicas: 3
     ports:
-      - '80:80'
-  db:
-    image: example/db
-    environment:
-      MYSQL_ROOT_PASSWORD: example
+      - "8080:80"
